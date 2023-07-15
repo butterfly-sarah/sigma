@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 75%;
+    margin: auto;
+    perspective: 700px;
+    background: -webkit-linear-gradient(left, #00F260, #0575E6);
+    font-family: poppins, serif;
+}
+
+.first {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.nav {
+    font-family: 'poppins', serif;
+    width: 100%;
+    background-color: whitesmoke;
+    height: 70px;
+    line-height: 70px;
+    vertical-align: middle;
+    padding: 0px 25px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.logo {
+    height: 50%;
+    vertical-align: middle;
+}
+
+.nav ul {
+    display: inline;
+    word-spacing: 35px;
+    margin: 0 55px;
+}
+
+.nav li {
+    position: relative;
+    padding: 0px 10px;
+    z-index: 1;
+}
+
+.nav li,
+.nav a {
+    list-style: none;
+    display: inline-block;
+    color: rgb(19, 55, 19);
+    font-size: 22px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.nav li::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 98.5%;
+    height: 0%;
+    border-left: 2px solid #0575E6;
+    border-right: 2px solid #0575E6;
+    z-index: -1;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.nav li:hover::before {
+    opacity: 1;
+    height: 60%;
+    width: 97%;
+    transition: 0.5s;
+}
+
+.nav li::after {
+    content: "";
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    width: 0%;
+    height: 60%;
+    border-top: 2px solid #0575E6;
+    border-bottom: 2px solid #0575E6;
+    z-index: -1;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.nav li:hover::after {
+    width: 100%;
+    height: 56%;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+    opacity: 1;
+}
+
+.nav tr td:hover {
+    background-color: rgb(220, 220, 220);
+    cursor: context-menu;
+}
+
+.nav th {
+    color: #0575E6;
+}
+
+.nav i {
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+.nav .fa-user-large {
+    margin: 0 10px;
+}
+
+.image {
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    height: 83vh;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.image p {
+    position: absolute;
+    top: 200px;
+    right: 30px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 70px;
+    font-family: 'Alfa Slab One', cursive;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
+}
+
+.image button {
+    position: absolute;
+    top: 430px;
+    right: 115px;
+    background-color: white;
+    color: rgb(50, 50, 50);
+    border: none;
+    width: 130px;
+    height: 43px;
+    border-radius: 25px;
+    font-size: 16px;
+    text-transform: capitalize;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.45);
+}
+
+.image button:hover {
+    cursor: pointer;
+}
+
+.second {
+    width: 100%;
+    text-align: center;
+}
+
+.second .hov p {
+    font-size: 40px;
+    text-align: center;
+    word-spacing: normal;
+    margin-top: 95px;
+    margin-bottom: 10px;
+    font-family: 'Castoro Titling', cursive;
+    color: white;
+    font-weight: 500;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
+    letter-spacing: 7px;
+}
+
+.second .parent {
+    margin-top: 55px;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    row-gap: 25px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.second .card {
+    width: 23%;
+    height: fit-content;
+    display: inline-block;
+    text-align: left;
+    word-spacing: normal;
+    color: white;
+    padding: 15px;
+    box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+}
+
+.second .card img {
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+
+.second h3 {
+    display: inline-block;
+    font-size: 15px;
+    text-transform: capitalize;
+    margin-left: 5%;
+    font-family: poppins, serif;
+}
+
+.second .card p {
+    text-transform: capitalize;
+    margin-top: 15px;
+    margin-left: 5%;
+    font-family: poppins, serif;
+    color: rgb(29, 29, 29);
+    font-size: 18px;
+}
+
+.second i {
+    font-size: 28px;
+    color: white;
+    opacity: 0;
+    margin-left: 7px;
+}
+
+.second .card:hover i {
+    opacity: 1;
+}
+
+.second .card:hover {
+    width: 24%;
+    transition: 0.2s;
+}
+
+.third {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45vh;
+    font-size: smaller;
+}
+
+.third>img {
+    height: 280px;
+    box-shadow: 0 60px 80px rgba(0, 0, 0, 0.60), 0 45px 26px rgba(0, 0, 0, 0.14);
+}
+
+.third .box {
+    display: inline-block;
+    position: relative;
+    width: 520px;
+    padding: 20px 30px;
+    color: white;
+    height: 280px;
+    box-shadow: 0 60px 80px rgba(0, 0, 0, 0.60), 0 45px 26px rgba(0, 0, 0, 0.14);
+}
+
+.third h2 {
+    color: black;
+}
+
+.third th p {
+    color: black;
+}
+
+.third table+p {
+    text-align: justify;
+    margin-top: 25px;
+}
+
+.third .box>.dash {
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    word-spacing: 15px;
+}
+
+.third .box .dash span {
+    display: inline-block;
+    width: 35px;
+    height: 5px;
+    background-color: white;
+}
+
+.third>img:hover {
+    height: 320px;
+    width: 280px;
+    transition: 0.5s;
+}
+
+.third .box i {
+    font-size: 55px;
+}
+
+.fourth {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    height: fit-content;
+    margin: 80px 0px;
+}
+
+.icon {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.icon1,
+.icon2 {
+    position: absolute;
+    display: block;
+}
+
+.icon1 {
+    top: 2px;
+    left: 0;
+    color: white;
+    transition: 0.5s;
+}
+
+.icon2 {
+    top: 110%;
+    left: 0;
+    color: rgb(50, 50, 50);
+}
+
+.icon:hover .icon1 {
+    top: -100%;
+    transition: 0.5s;
+}
+
+.icon:hover .icon2 {
+    top: 2px;
+    transition: 0.5s;
+}
+
+.fourth .feature {
+    display: inline-block;
+    width: 19%;
+    padding: 30px 0px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: inset -5px -5px 10px 0px rgba(0, 0, 0, 0.1), inset 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.fourth p {
+    color: white;
+    font-size: 14px;
+}
+
+.fourth .vert {
+    width: 1px;
+    align-self: stretch;
+    background-color: black;
+}
+
+.fourth .feature h3 {
+    text-transform: capitalize;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+hr {
+    margin-bottom: 40px;
+}
+
+.fifth {
+    text-align: center;
+}
+
+.fifth h2 {
+    margin-bottom: 15px;
+    font-size: 40px;
+    text-align: center;
+    word-spacing: normal;
+    margin-top: 95px;
+    font-family: 'Castoro Titling', cursive;
+    color: white;
+    font-weight: 500;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
+    letter-spacing: 7px;
+}
+
+.products {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    margin: 70px auto;
+}
+
+.products p {
+    text-shadow: 3px 3px 5px white;
+}
+
+.fifth .parent {
+    width: 100%;
+    display: flex;
+    row-gap: 25px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    position: relative;
+}
+
+.fifth .product {
+    transform-style: preserve-3d;
+    background-color: transparent;
+    padding: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.fifth .product img {
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .1s;
+}
+
+.fifth .product .player {
+    backface-visibility: hidden;
+    z-index: 3;
+    z-index: -5;
+}
+
+.pimg {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.fifth .product i {
+    color: yellow;
+}
+
+.fifth .product .back {
+    width: 15%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.fifth .product .pimg:hover .back {
+    visibility: visible;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.fifth .product .social {
+    padding-top: 50%;
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    visibility: hidden;
+    transition: 0.01s;
+}
+
+.fifth .product .child div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(47, 47, 47);
+    text-align: center;
+    line-height: 40px;
+    display: inline-block;
+}
+
+.fifth .product .child a {
+    display: block;
+    color: rgb(86, 86, 86);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.fifth .product .child div:hover {
+    background-color: black;
+}
+
+.fifth .product .child i {
+    color: white;
+    margin: 0;
+    position: static;
+    font-size: 20px;
+}
+
+.fifth .product .pimg:hover .social {
+    visibility: visible;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1;
+    line-height: normal;
+    word-spacing: normal;
+    background-color: whitesmoke;
+    border: 2px solid #0575E6;
+    display: table;
+    visibility: hidden;
+    transition: 0.1s;
+    padding: 10px 0px 10px 10px;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.menu td,
+.menu th {
+    margin: 10px;
+    text-align: center;
+    display: table-cell;
+    min-width: 110px;
+    text-align: left;
+}
+
+.tshirt:hover .menu {
+    visibility: visible;
+}
+
+.fifth h4 {
+    margin: 10px 0px;
+    color: white;
+}
+
+.fifth .product p {
+    margin-top: 10px;
+}
+
+.hline {
+    display: inline-block;
+    margin: auto;
+    width: 15%;
+    height: 2px;
+    background-color: white;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.45);
+    transition: 0.5s;
+}
+
+.hov:hover .hline {
+    width: 20%;
+    transition: 0.5s;
+}
